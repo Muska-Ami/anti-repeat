@@ -1,0 +1,22 @@
+{
+  "name": "koishi-plugin-anti-repeat",
+  "description": "打断复读",
+  "version": "1.1.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.11.5"
+  }
+}

@@ -13,7 +13,7 @@ const repeatMap: RepeatMap = {}
 
 function checkRepeat (session) {
   const groupId = session.guildId
-  const content = session.content
+  const content = session.content.replace(/[^a-zA-Z0-9\u4e00-\u9fa5\u3040-\u309F\u30A0-\u30FF\uAC00-\uD7A3\u0F00-\u0FFF\u0600-\u06FF\u1100-\u11FF\u0E00-\u0E7F]+/g, '').trim()
   if (!repeatMap[groupId]) repeatMap[groupId] = {}
   if (!repeatMap[groupId][content]) repeatMap[groupId][content] = { count: 1 }
   else repeatMap[groupId][content].count++
@@ -44,7 +44,8 @@ export function apply (ctx: Context) {
         '复读机坏了吗？',
         '换个话题吧。',
         '你们在干什么？',
-        '我要打断你们的复读！'
+        '我要打断你们的复读！',
+        '还在复读还在复读？'
       ]
       // 使用Math.floor随机选择一个打断的内容
       const interrupt = messages[Math.floor(Math.random() * messages.length)]

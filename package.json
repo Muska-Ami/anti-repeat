@@ -1,7 +1,7 @@
 {
-  "name": "koishi-plugin-anti-repeat",
+  "name": "@muska-ami/koishi-plugin-anti-repeat-plus",
   "description": "打断复读",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [

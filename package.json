@@ -17,6 +17,10 @@
     "koishi",
     "plugin"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "peerDependencies": {
     "koishi": "^4.11.5"
   }
